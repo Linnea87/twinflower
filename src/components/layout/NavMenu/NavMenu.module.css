@@ -23,6 +23,7 @@
   font-weight: 500;
   color: var(--color-text);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .active {
@@ -31,7 +32,17 @@
   text-underline-offset: 6px;
 }
 
-/* .link and .active stay as they are */
+@media (hover: hover) {
+  .link:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
 
 @media (min-width: 600px) {
   .nav {
@@ -42,5 +53,6 @@
   .navList {
     flex-direction: row;
     gap: var(--space-md);
+    padding: 0;
   }
 }
