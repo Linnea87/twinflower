@@ -1,0 +1,29 @@
+:root {
+  /* Base palette */
+  --color-background: #fbf7f4;
+  --color-primary: #e8b4bc;
+  --color-primary-dark: #b86b7a;
+  --color-secondary: #4f6b45;
+  --color-accent: #8b4a3c;
+  --color-surface: #eef0e8;
+  --color-text: #2f3a2b;
+  --color-white: #ffffff;
+
+  /* Seasonal tokens, overridden in themes.css */
+  --season-decor: var(--color-primary-dark);
+  --season-text: var(--color-text);
+  --season-banner: var(--color-primary);
+
+  /* Typography */
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Spacing and sizing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --radius: 8px;
+  --touch-target: 44px;
+}
