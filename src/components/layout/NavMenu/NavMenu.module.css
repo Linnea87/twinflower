@@ -1,0 +1,22 @@
+.navList {
+  display: flex;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.active {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
