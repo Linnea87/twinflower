@@ -19,8 +19,8 @@ function Header() {
       </Link>
 
       <div className={styles.actions}>
-        <CartLink onNavigate={closeMenu} />
         <MenuToggle isOpen={isMenuOpen} onToggle={toggleMenu} />
+        <CartLink onNavigate={closeMenu} />
       </div>
 
       <NavMenu isOpen={isMenuOpen} onNavigate={closeMenu} />
