@@ -1,0 +1,37 @@
+.cartLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  color: var(--color-text);
+}
+
+.badge {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  border-radius: 999px;
+}
+
+@media (hover: hover) {
+  .cartLink:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+.cartLink:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

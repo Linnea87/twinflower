@@ -8,8 +8,22 @@
   background-color: var(--color-sage);
 }
 
+.logoLink {
+  margin-right: auto;
+}
+
 .logo {
   width: auto;
   height: 40px;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .actions {
+    order: 1;
+  }
+}

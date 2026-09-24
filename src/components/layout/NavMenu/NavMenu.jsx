@@ -21,11 +21,6 @@ function NavMenu({ isOpen, onNavigate }) {
             About
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/cart" className={getLinkClass} onClick={onNavigate}>
-            Cart
-          </NavLink>
-        </li>
       </ul>
     </nav>
   );

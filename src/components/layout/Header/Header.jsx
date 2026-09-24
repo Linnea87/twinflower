@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import logo from "../../../assets/logo-horizontal.webp";
+import CartLink from "../CartLink/CartLink";
 import MenuToggle from "../MenuToggle/MenuToggle";
 import NavMenu from "../NavMenu/NavMenu";
 import styles from "./Header.module.css";
@@ -13,10 +14,15 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <Link to="/" onClick={closeMenu}>
+      <Link to="/" onClick={closeMenu} className={styles.logoLink}>
         <img src={logo} alt="Twinflower" className={styles.logo} />
       </Link>
-      <MenuToggle isOpen={isMenuOpen} onToggle={toggleMenu} />
+
+      <div className={styles.actions}>
+        <CartLink onNavigate={closeMenu} />
+        <MenuToggle isOpen={isMenuOpen} onToggle={toggleMenu} />
+      </div>
+
       <NavMenu isOpen={isMenuOpen} onNavigate={closeMenu} />
     </header>
   );
