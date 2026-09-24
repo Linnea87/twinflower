@@ -1,8 +1,18 @@
+.nav {
+  display: none;
+  width: 100%;
+}
+
+.open {
+  display: block;
+}
+
 .navList {
   display: flex;
-  gap: var(--space-md);
+  flex-direction: column;
+  align-items: center;
   margin: 0;
-  padding: 0;
+  padding: var(--space-sm) 0;
   list-style: none;
 }
 
@@ -19,4 +29,18 @@
   color: var(--color-primary-dark);
   text-decoration: underline;
   text-underline-offset: 6px;
+}
+
+/* .link and .active stay as they are */
+
+@media (min-width: 600px) {
+  .nav {
+    display: block;
+    width: auto;
+  }
+
+  .navList {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
 }

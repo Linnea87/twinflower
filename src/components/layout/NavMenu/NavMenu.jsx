@@ -5,22 +5,24 @@ function getLinkClass({ isActive }) {
   return isActive ? `${styles.link} ${styles.active}` : styles.link;
 }
 
-function NavMenu() {
+function NavMenu({ isOpen, onNavigate }) {
+  const navClass = isOpen ? `${styles.nav} ${styles.open}` : styles.nav;
+
   return (
-    <nav aria-label="Main navigation">
+    <nav id="main-navigation" aria-label="Main navigation" className={navClass}>
       <ul className={styles.navList}>
         <li>
-          <NavLink to="/shop" className={getLinkClass}>
+          <NavLink to="/shop" className={getLinkClass} onClick={onNavigate}>
             Shop
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className={getLinkClass}>
+          <NavLink to="/about" className={getLinkClass} onClick={onNavigate}>
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to="/cart" className={getLinkClass}>
+          <NavLink to="/cart" className={getLinkClass} onClick={onNavigate}>
             Cart
           </NavLink>
         </li>
