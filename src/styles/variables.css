@@ -8,7 +8,7 @@
   --color-surface: #eef0e8;
   --color-text: #505440;
   --color-white: #ffffff;
-  --color-header: #e3e8da;
+  --color-sage: #e3e8da;
 
   /* Seasonal tokens, overridden in themes.css */
   --season-decor: var(--color-primary-dark);
