@@ -1,9 +1,8 @@
 import { NavLink } from "react-router";
+import getNavLinkClass from "../../../utils/getNavLinkClass";
 import styles from "./NavMenu.module.css";
 
-function getLinkClass({ isActive }) {
-  return isActive ? `${styles.link} ${styles.active}` : styles.link;
-}
+const getLinkClass = getNavLinkClass(styles.link, styles.active);
 
 function NavMenu({ isOpen, onNavigate }) {
   const navClass = isOpen ? `${styles.nav} ${styles.open}` : styles.nav;

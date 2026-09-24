@@ -24,6 +24,10 @@
   border-radius: 999px;
 }
 
+.active {
+  color: var(--color-primary-dark);
+}
+
 @media (hover: hover) {
   .cartLink:hover {
     color: var(--color-primary-dark);

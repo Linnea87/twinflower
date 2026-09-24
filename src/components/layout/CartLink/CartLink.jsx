@@ -2,7 +2,10 @@ import { NavLink } from "react-router";
 import { useSelector } from "react-redux";
 import { ShoppingBasket } from "lucide-react";
 import { selectCartCount } from "../../../features/cart/cartSelectors";
+import getNavLinkClass from "../../../utils/getNavLinkClass";
 import styles from "./CartLink.module.css";
+
+const getLinkClass = getNavLinkClass(styles.cartLink, styles.active);
 
 function CartLink({ onNavigate }) {
   const count = useSelector(selectCartCount);
@@ -11,7 +14,7 @@ function CartLink({ onNavigate }) {
   return (
     <NavLink
       to="/cart"
-      className={styles.cartLink}
+      className={getLinkClass}
       onClick={onNavigate}
       aria-label={label}
     >
