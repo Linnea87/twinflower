@@ -6,8 +6,9 @@
   --color-secondary: #4f6b45;
   --color-accent: #8b4a3c;
   --color-surface: #eef0e8;
-  --color-text: #2f3a2b;
+  --color-text: #505440;
   --color-white: #ffffff;
+  --color-header: #e3e8da;
 
   /* Seasonal tokens, overridden in themes.css */
   --season-decor: var(--color-primary-dark);
