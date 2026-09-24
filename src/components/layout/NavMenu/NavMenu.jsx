@@ -12,6 +12,11 @@ function NavMenu({ isOpen, onNavigate }) {
     <nav id="main-navigation" aria-label="Main navigation" className={navClass}>
       <ul className={styles.navList}>
         <li>
+          <NavLink to="/" end className={getLinkClass} onClick={onNavigate}>
+            Home
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/shop" className={getLinkClass} onClick={onNavigate}>
             Shop
           </NavLink>

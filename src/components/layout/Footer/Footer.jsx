@@ -13,6 +13,11 @@ function Footer() {
       <nav aria-label="Footer navigation">
         <ul className={styles.linkList}>
           <li>
+            <Link to="/" className={styles.navLink}>
+              Home
+            </Link>
+          </li>
+          <li>
             <Link to="/shop" className={styles.navLink}>
               Shop
             </Link>
