@@ -10,7 +10,7 @@
 .navList {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
   padding: var(--space-sm) 0;
   list-style: none;

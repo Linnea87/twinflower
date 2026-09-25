@@ -14,16 +14,21 @@ function Header() {
 
   return (
     <header className={styles.header}>
+      <div className={styles.menuArea}>
+        <MenuToggle isOpen={isMenuOpen} onToggle={toggleMenu} />
+      </div>
+
       <Link to="/" onClick={closeMenu} className={styles.logoLink}>
         <img src={logo} alt="Twinflower" className={styles.logo} />
       </Link>
 
-      <div className={styles.actions}>
-        <MenuToggle isOpen={isMenuOpen} onToggle={toggleMenu} />
+      <div className={styles.cartArea}>
         <CartLink onNavigate={closeMenu} />
       </div>
 
-      <NavMenu isOpen={isMenuOpen} onNavigate={closeMenu} />
+      <div className={styles.navArea}>
+        <NavMenu isOpen={isMenuOpen} onNavigate={closeMenu} />
+      </div>
     </header>
   );
 }
