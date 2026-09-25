@@ -5,10 +5,13 @@ import { selectCartCount } from "../../../features/cart/cartSelectors";
 import getNavLinkClass from "../../../utils/getNavLinkClass";
 import styles from "./CartLink.module.css";
 
+// Adds the active class when the cart page is open
 const getLinkClass = getNavLinkClass(styles.cartLink, styles.active);
 
-function CartLink({ onNavigate }) {
+const CartLink = ({ onNavigate }) => {
   const count = useSelector(selectCartCount);
+
+  // The icon has no text, so the label describes the link for screen readers
   const label = `Cart, ${count} ${count === 1 ? "item" : "items"}`;
 
   return (
@@ -22,6 +25,6 @@ function CartLink({ onNavigate }) {
       {count > 0 && <span className={styles.badge}>{count}</span>}
     </NavLink>
   );
-}
+};
 
 export default CartLink;

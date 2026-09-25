@@ -1,3 +1,5 @@
+/* ===== Shared size ===== */
+/* Image and placeholder share dimensions to avoid layout shift */
 .image,
 .placeholder {
   width: 100%;
@@ -5,10 +7,12 @@
   border-radius: var(--radius);
 }
 
+/* ===== Image ===== */
 .image {
   object-fit: cover;
 }
 
+/* ===== Placeholder ===== */
 .placeholder {
   display: flex;
   align-items: center;

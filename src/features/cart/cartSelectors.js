@@ -1,17 +1,13 @@
-export function selectCartItems(state) {
-  return state.cart.cartItems;
-}
+// Components read cart data through these, so they do not depend on the state shape
 
-export function selectCartCount(state) {
-  return selectCartItems(state).reduce(
-    (total, item) => total + item.quantity,
-    0,
-  );
-}
+export const selectCartItems = (state) => state.cart.cartItems;
 
-export function selectCartTotal(state) {
-  return selectCartItems(state).reduce(
+// Total number of items, counting quantity
+export const selectCartCount = (state) =>
+  selectCartItems(state).reduce((total, item) => total + item.quantity, 0);
+
+export const selectCartTotal = (state) =>
+  selectCartItems(state).reduce(
     (total, item) => total + item.price * item.quantity,
     0,
   );
-}

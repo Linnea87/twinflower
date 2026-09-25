@@ -4,15 +4,17 @@ const initialState = {
   cartItems: [],
 };
 
-function findItem(state, id) {
-  return state.cartItems.find((item) => item.id === id);
-}
+// ===== Helpers =====
+// Called from the reducers with Immer's draft state, so direct mutation is safe
 
-function removeById(state, id) {
+const findItem = (state, id) => state.cartItems.find((item) => item.id === id);
+
+const removeById = (state, id) => {
   state.cartItems = state.cartItems.filter((item) => item.id !== id);
-}
+};
 
-function changeQuantity(state, id, amount) {
+// Removes the item when the quantity reaches 0
+const changeQuantity = (state, id, amount) => {
   const item = findItem(state, id);
 
   if (!item) return;
@@ -22,12 +24,14 @@ function changeQuantity(state, id, amount) {
   if (item.quantity <= 0) {
     removeById(state, id);
   }
-}
+};
 
+// ===== Slice =====
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    // Expects the full product as payload, the other reducers expect only the id
     addItem: (state, action) => {
       const existingItem = findItem(state, action.payload.id);
 

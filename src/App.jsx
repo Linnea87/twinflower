@@ -2,7 +2,7 @@ import { Outlet } from "react-router";
 import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
@@ -12,6 +12,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

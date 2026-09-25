@@ -1,6 +1,7 @@
 :root {
-  /* Base palette */
+  /* ===== Colors ===== */
   --color-background: #fbf7f4;
+  --color-sage: #e3e8da;
   --color-primary: #e8b4bc;
   --color-primary-dark: #b86b7a;
   --color-secondary: #4f6b45;
@@ -8,23 +9,24 @@
   --color-surface: #eef0e8;
   --color-text: #505440;
   --color-white: #ffffff;
-  --color-sage: #e3e8da;
 
-  /* Seasonal tokens, overridden in themes.css */
+  /* ===== Seasonal ===== */
+  /* Default values, overridden per season in themes.css */
   --season-decor: var(--color-primary-dark);
   --season-text: var(--color-text);
   --season-banner: var(--color-primary);
 
-  /* Typography */
+  /* ===== Typography ===== */
   --font-heading: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  /* Spacing and sizing */
+  /* ===== Spacing and sizing ===== */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2.5rem;
   --radius: 8px;
+  /* Minimum size for tap targets */
   --touch-target: 44px;
 }

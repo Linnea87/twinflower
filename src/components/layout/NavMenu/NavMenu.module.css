@@ -1,3 +1,5 @@
+/* ===== Visibility ===== */
+/* Hidden on mobile until the menu is opened */
 .nav {
   display: none;
   width: 100%;
@@ -7,6 +9,7 @@
   display: block;
 }
 
+/* ===== List ===== */
 .navList {
   display: flex;
   flex-direction: column;
@@ -16,6 +19,7 @@
   list-style: none;
 }
 
+/* ===== Links ===== */
 .link {
   display: inline-flex;
   align-items: center;
@@ -44,6 +48,7 @@
   border-radius: 4px;
 }
 
+/* ===== Responsive ===== */
 @media (min-width: 600px) {
   .nav {
     display: block;

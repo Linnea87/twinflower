@@ -1,3 +1,4 @@
+/* ===== Link ===== */
 .cartLink {
   position: relative;
   display: inline-flex;
@@ -8,6 +9,8 @@
   color: var(--color-text);
 }
 
+/* ===== Badge ===== */
+/* Accent color instead of primary dark, for enough contrast with white text */
 .badge {
   position: absolute;
   top: 4px;
@@ -24,6 +27,7 @@
   border-radius: 999px;
 }
 
+/* ===== States ===== */
 .active {
   color: var(--color-primary-dark);
 }

@@ -1,9 +1,10 @@
 import { useGetPhotoByIdQuery } from "../../../services/pexelsApi";
 import styles from "./ProductImage.module.css";
 
-function ProductImage({ photoId, alt }) {
+const ProductImage = ({ photoId, alt }) => {
   const { data: photo, isLoading, isError } = useGetPhotoByIdQuery(photoId);
 
+  // Same size as the image, so the layout does not jump while loading
   if (isLoading) {
     return <div className={styles.placeholder} aria-hidden="true" />;
   }
@@ -12,6 +13,7 @@ function ProductImage({ photoId, alt }) {
     return <div className={styles.placeholder}>Image unavailable</div>;
   }
 
+  // Uses the product name as alt text when given, otherwise the description from Pexels
   return (
     <img
       src={photo.src.medium}
@@ -20,6 +22,6 @@ function ProductImage({ photoId, alt }) {
       loading="lazy"
     />
   );
-}
+};
 
 export default ProductImage;

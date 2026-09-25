@@ -1,3 +1,4 @@
+/* ===== Button ===== */
 .toggle {
   display: flex;
   flex-direction: column;
@@ -13,6 +14,7 @@
   cursor: pointer;
 }
 
+/* ===== Bars ===== */
 .bar {
   width: 24px;
   height: 2px;
@@ -22,7 +24,8 @@
     opacity 0.2s ease;
 }
 
-/* Turns the three bars into an X */
+/* ===== Open state ===== */
+/* Moves the outer bars to the center and rotates them into an X */
 .open .bar:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -35,6 +38,7 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ===== Responsive ===== */
 @media (min-width: 600px) {
   .toggle {
     display: none;

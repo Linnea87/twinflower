@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import logo from "../../../assets/logo-stacked.webp";
 import styles from "./Footer.module.css";
 
-function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -35,6 +35,7 @@ function Footer() {
         </ul>
       </nav>
 
+      {/* Pexels asks for a visible link when their API is used */}
       <p className={styles.smallText}>
         Photos provided by{" "}
         <a
@@ -52,6 +53,6 @@ function Footer() {
       </p>
     </footer>
   );
-}
+};
 
 export default Footer;

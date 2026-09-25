@@ -1,3 +1,4 @@
+/* ===== Base ===== */
 *,
 *::before,
 *::after {
@@ -12,6 +13,7 @@ body {
   background-color: var(--color-background);
 }
 
+/* ===== Typography ===== */
 h1,
 h2,
 h3 {
@@ -20,19 +22,22 @@ h3 {
   line-height: 1.2;
 }
 
+a {
+  color: var(--color-primary-dark);
+}
+
+/* ===== Elements ===== */
 img {
   display: block;
   max-width: 100%;
-}
-
-a {
-  color: var(--color-primary-dark);
 }
 
 button {
   font: inherit;
 }
 
+/* ===== Layout ===== */
+/* Keeps the footer at the bottom on short pages */
 #root {
   display: flex;
   flex-direction: column;

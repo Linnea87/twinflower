@@ -6,14 +6,18 @@ import MenuToggle from "../MenuToggle/MenuToggle";
 import NavMenu from "../NavMenu/NavMenu";
 import styles from "./Header.module.css";
 
-function Header() {
+const Header = () => {
+  // --- State ---
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // --- Handlers ---
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
+  // --- Render ---
   return (
     <header className={styles.header}>
+      {/* Hidden from 600px, where the nav links are always visible */}
       <div className={styles.menuArea}>
         <MenuToggle isOpen={isMenuOpen} onToggle={toggleMenu} />
       </div>
@@ -31,6 +35,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;
