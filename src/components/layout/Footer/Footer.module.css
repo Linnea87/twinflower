@@ -10,7 +10,7 @@
 }
 
 .logo {
-  width: 160px;
+  width: 120px;
   height: auto;
 }
 
@@ -55,4 +55,10 @@
   outline: 2px solid var(--color-primary-dark);
   outline-offset: 4px;
   border-radius: 4px;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    width: 160px;
+  }
 }
